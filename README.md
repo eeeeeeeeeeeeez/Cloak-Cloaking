@@ -32,3 +32,21 @@
 ## 聲明
 
 本項目僅用於 **技術研究和學習用途**。
+
+## ☁️ Vercel 部署指南
+
+本專案已優化以支援 Vercel 部署。
+
+### 部署步驟
+
+1.  在 Vercel 中匯入此 GitHub 倉庫。
+2.  在 **Environment Variables** 設定中新增：
+    *   `REAL_LANDING_URL`: 設定為您想要真實用戶跳轉到的網址（例如 `https://your-real-site.com`）。
+3.  點擊 **Deploy**。
+
+### 工作原理
+
+*   **審核員/Bot**: 會看到 `white_page.html` 的內容，URL 保持不變。
+*   **真實用戶**: 
+    *   如果設定了 `REAL_LANDING_URL`，會自動跳轉（302 Redirect）到該網址。
+    *   如果未設定，則顯示 `landing_page.html`。
